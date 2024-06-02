@@ -21,13 +21,25 @@
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="64x64">
     <style>
+        .navigation {
+            padding: 30px 100px;
+        }
+
+        .section {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
         .intro-wrap {
             margin-top: 50px;
             margin-bottom: 40px;
         }
+
         .carrer-headline-wrap {
+            width: 100%;
             margin-bottom: 40px;
         }
+
         .project-grid {
             margin: auto auto;
             grid-column-gap: 30px;
@@ -35,34 +47,83 @@
             grid-template-columns: auto auto;
             margin-bottom: 80px;
         }
+
         .contact-form-wrap {
             width: 20%;
         }
+
         label {
             font-size: 1rem;
             text-transform: none;
         }
+
         .work-experience-grid {
-            margin-bottom: 80px;
+            grid-row-gap: 10px;
+            margin-bottom: 30px;
         }
+
         .work-image {
             margin-bottom: 10px;
         }
+
         .work-image.cc-work-1 {
-            background-image: url(/images/sangsang_main.png);
+            background-image: url(./images/sangsang_main.png);
             background-size: cover;
         }
+
         .work-image.cc-work-2 {
-            background-image: url(/images/plan_main.png);
+            background-image: url(./images/plan_main.png);
             background-size: cover;
         }
+
         .work-image.cc-work-3 {
-            background-image: url(/images/db_main.png);
+            background-image: url(./images/db_main.png);
             background-size: cover;
         }
+
         .work-image.cc-work-4 {
-            background-image: url(/images/mongle_main.png);
-            background-size: cover;
+            background-image: url(./images/mongle_main.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .card {
+            width: 100px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .image {
+            width: 100%;
+            height: 150px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .content {
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .grid-header {
+            grid-column: 1 / 5;
         }
     </style>
 </head>
@@ -88,44 +149,81 @@
         <div class="container">
             <div class="carrer-headline-wrap">
                 <h2>Skills</h2>
-                <p class="paragraph-light">
-                    프로젝트 내용
-                </p>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="image" style="background-image: url('./images/java.png');"></div>
+                        <div class="content">Java</div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url('./images/oracle.png');"></div>
+                        <div class="content">Oracle</div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url('./images/html5.png');"></div>
+                        <div class="content">HTML</div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url('./images/css3.png');"></div>
+                        <div class="content">CSS</div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url('./images/javascript.png');"></div>
+                        <div class="content">JavaScript</div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url('./images/jquery.png');"></div>
+                        <div class="content">jQuery</div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url('./images/bootstrap.png');"></div>
+                        <div class="content">Bootstrap</div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url('./images/spring.png');"></div>
+                        <div class="content">Spring</div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url('./images/springboot.png');"></div>
+                        <div class="content">Springboot</div>
+                    </div>
+                </div>
             </div>
             <div class="w-layout-grid work-experience-grid">
+                <h2 class="grid-header">Project</h2>
                 <div class="work-position-wrap">
-                    <div class="position-name-text">Webflow</div>
-                    <div class="paragraph-light cc-position-name">Graphic Designer</div>
+                    <div class="position-name-text">Web Project</div>
+                    <div class="paragraph-light cc-position-name">Front&Back Developer</div>
                     <div class="paragraph-tiny cc-paragraph-tiny-light">
-                        April 2014 — Mar 2015<br />
+                        19 Apr — 13 May<br />
                     </div>
                 </div>
                 <div class="work-position-wrap">
-                    <div class="position-name-text">Webflow</div>
-                    <div class="paragraph-light cc-position-name">Web Designer</div>
+                    <div class="position-name-text">Web Project</div>
+                    <div class="paragraph-light cc-position-name">Front&Back Developer</div>
                     <div class="paragraph-tiny cc-paragraph-tiny-light">
-                        Apr 2015 — Mar 2016<br />
+                        14 Mar — 18 May<br />
                     </div>
                 </div>
                 <div class="work-position-wrap">
-                    <div class="position-name-text">Webflow</div>
-                    <div class="paragraph-light cc-position-name">Visual Developer</div>
+                    <div class="position-name-text">DB Project</div>
+                    <div class="paragraph-light cc-position-name">Database Developer</div>
                     <div class="paragraph-tiny cc-paragraph-tiny-light">
-                        Jun 2016 — Jul 2017<br />
+                        28 Feb — 11 Mar<br />
                     </div>
                 </div>
                 <div class="work-position-wrap">
-                    <div class="position-name-text">Webflow</div>
-                    <div class="paragraph-light cc-position-name">Dictator</div>
+                    <div class="position-name-text">Java Project</div>
+                    <div class="paragraph-light cc-position-name">Java Developer</div>
                     <div class="paragraph-tiny cc-paragraph-tiny-light">
-                        Aug 2017 — forever<br />
+                        26 Jan — 07 Feb<br />
                     </div>
                 </div>
             </div>
         </div>
         <div class="w-layout-grid project-grid">
             <div>
-                <a href="https://portfolio-pgyho.my.canva.site/sangsang" class="work-image cc-work-1 w-inline-block"></a>
+                <a href="https://portfolio-pgyho.my.canva.site/sangsang"
+                    class="work-image cc-work-1 w-inline-block"></a>
                 <div class="work-description">
                     <a href="https://portfolio-pgyho.my.canva.site/sangsang" class="project-name-link">상상자까<br /></a>
                     <div class="paragraph-light">Servlet/JSP Web Project</div>
@@ -139,9 +237,11 @@
                 </div>
             </div>
             <div>
-                <a href="https://portfolio-pgyho.my.canva.site/oracleproject" class="work-image cc-work-3 w-inline-block"></a>
+                <a href="https://portfolio-pgyho.my.canva.site/oracleproject"
+                    class="work-image cc-work-3 w-inline-block"></a>
                 <div class="work-description">
-                    <a href="https://portfolio-pgyho.my.canva.site/oracleproject" class="project-name-link">교육센터 운영프로그램</a>
+                    <a href="https://portfolio-pgyho.my.canva.site/oracleproject" class="project-name-link">교육센터
+                        운영프로그램</a>
                     <div class="paragraph-light">Database Project</div>
                 </div>
             </div>
@@ -176,8 +276,8 @@
             </div>
         </div>
     </div>
-    
-    
+
+
 </body>
 
 </html>
